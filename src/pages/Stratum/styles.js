@@ -1,22 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 25% 75%;
-  min-height: 100vh;
-`;
-
-export const Menu = styled.div`
-  background: linear-gradient(
-    to right top,
-    rgb(5, 25, 55),
-    rgb(0, 74, 120),
-    rgb(0, 128, 147),
-    rgb(0, 181, 118),
-    rgb(123, 225, 26)
-  );
-`;
-
 export const BlockUser = styled.div`
   height: 10vh;
   background-color: white;
@@ -25,15 +8,6 @@ export const BlockUser = styled.div`
   align-items: center;
   font-size: 1.8rem;
   border-right: 1px solid #ddd;
-`;
-
-export const Header = styled.header`
-  background-color: #fff;
-  padding: 2em;
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const Title = styled.h1`
@@ -54,25 +28,7 @@ export const ContainerIcons = styled.div`
 
 export const Content = styled.div`
   background-color: #ebebeb;
-`;
-
-export const List = styled.ul`
-  list-style: none;
-  text-align: center;
-  margin: 1em;
-`;
-
-export const ListItem = styled.li`
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 0.2em;
-  margin: 1em 0 1em 0;
-  cursor: pointer;
-
-  :hover {
-    text-decoration: underline;
-  }
+  min-height: 90vh;
 `;
 
 export const Block = styled.div`
