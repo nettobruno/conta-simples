@@ -1,59 +1,5 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
-  align-items: center;
-  background-color: #fafafa;
-  display: flex;
-  height: 10vh;
-  justify-content: center;
-  padding: 3rem;
-`;
-
-export const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-`;
-
-export const ContainerUser = styled.div`
-  font-size: 1.6rem;
-  display: flex;
-  cursor: pointer;
-
-  span {
-    margin-left: 10px;
-  }
-`;
-
-export const List = styled.ul`
-  list-style: none;
-`;
-
-export const ListItems = styled.li`
-  border-bottom: 2px solid transparent;
-  color: #525252;
-  display: inline-block;
-  font-size: 1.2rem;
-  padding: 0.2em;
-  margin: 0 2em 0 2em;
-
-  :hover {
-    cursor: pointer;
-    border-bottom: 2px solid #7be11a;
-  }
-`;
-
-export const ContainerIcons = styled.div`
-  font-size: 1.6rem;
-  display: flex;
-
-  div {
-    margin: 5px;
-    cursor: pointer;
-  }
-`;
-
 export const Content = styled.div`
   margin: auto;
   width: 75%;
@@ -66,8 +12,9 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3.5rem;
   color: #525252;
+  font-size: 3.5rem;
+  margin-top: 1.8em;
 
   @media (max-width: 800px) {
     text-align: center;
@@ -75,7 +22,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const SubTitle = styled.h1`
+export const TitleBlock = styled.h2`
   font-size: 2rem;
   color: #7be11a;
 `;
@@ -114,5 +61,40 @@ export const Block = styled.div`
     width: 100%;
     height: 100%;
     margin: 0;
+  }
+`;
+
+export const Section = styled.section`
+  background-color: #7be11a;
+  color: #fff;
+  padding: 6em;
+
+  p {
+    font-size: 1.6rem;
+  }
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+`;
+
+export const Footer = styled.footer`
+  color: #d3d3d3;
+  padding: 2em;
+  text-align: center;
+
+  p {
+    font-size: 1.3rem;
+  }
+`;
+
+export const Img = styled.img`
+  width: 15%;
+`;
+
+export const BlockIcon = styled.div`
+  img {
+    margin: 0.5em;
   }
 `;
