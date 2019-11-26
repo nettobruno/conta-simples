@@ -1,45 +1,23 @@
 import styled from 'styled-components';
 
-export const BlockUser = styled.div`
-  height: 10vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  border-right: 1px solid #ddd;
-`;
-
 export const Title = styled.h1`
-  font-size: 2rem;
-  color: #7be11a;
-  background-color: white;
-`;
-
-export const ContainerIcons = styled.div`
-  font-size: 1.6rem;
-  display: flex;
-
-  div {
-    margin: 5px;
-    cursor: pointer;
-  }
-`;
-
-export const Content = styled.div`
-  background-color: #ebebeb;
-  min-height: 90vh;
+  color: #525252;
+  font-size: 3.5rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 `;
 
 export const Block = styled.div`
-  width: 100%;
-  padding: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin: auto;
+  width: 75%;
 `;
 
 export const ContainerItem = styled.div`
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 5px 5px 10px #d3d3d3;
+  box-shadow: 1px 1px 5px #f0f0f0;
   padding: 1em;
   margin-bottom: 1.5em;
   display: flex;
