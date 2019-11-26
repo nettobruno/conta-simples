@@ -96,5 +96,10 @@ export const Img = styled.img`
 export const BlockIcon = styled.div`
   img {
     margin: 0.5em;
+    transition: 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
   }
 `;
