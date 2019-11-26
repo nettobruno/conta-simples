@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidemenu from '../../components/Sidebar';
+import Footer from '../../components/Footer';
 
 import Emprestimo from '../../assets/emprestimo.png';
 import Depositar from '../../assets/depositar.png';
@@ -7,10 +8,6 @@ import Transferir from '../../assets/transferir.png';
 import Cartoes from '../../assets/cartao.png';
 import Investimento from '../../assets/investimento.png';
 import addAmigo from '../../assets/addAmigo.png';
-import Logo from '../../assets/logo-conta-simples.svg';
-import Facebook from '../../assets/facebook.png';
-import Twitter from '../../assets/twitter.png';
-import Linkedin from '../../assets/linkedin.png';
 
 import {
   Content,
@@ -20,9 +17,6 @@ import {
   Block,
   Section,
   SubTitle,
-  Footer,
-  Img,
-  BlockIcon,
 } from './styles';
 
 export default function Main() {
@@ -88,24 +82,7 @@ export default function Main() {
         </p>
       </Section>
 
-      <Footer>
-        <Img src={Logo} alt="Logo do Conta Simples" />
-        <p>help@contasimples.com.br | (11) 94507-1807</p>
-        <BlockIcon>
-          <a href="https://www.facebook.com/contasimplesBR/" target="blank">
-            <img src={Facebook} alt="Logo facebook" />
-          </a>
-          <a href="https://twitter.com/contasimplesBR" target="blank">
-            <img src={Twitter} alt="Logo twitter" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/contasimples"
-            target="blank"
-          >
-            <img src={Linkedin} alt="Logo linkedin" />
-          </a>
-        </BlockIcon>
-      </Footer>
+      <Footer />
     </>
   );
 }
