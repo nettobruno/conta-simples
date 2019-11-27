@@ -1,5 +1,7 @@
 import React from 'react';
 
+import NumberFormat from 'react-number-format';
+
 import { Container } from './styles';
 
 export default class ContainerItem extends React.Component {
@@ -8,8 +10,8 @@ export default class ContainerItem extends React.Component {
 
     this.state = {
       records: [
-        { name: 'Burguer King', date: '27/11', hour: '18:10', price: -36.0 },
-        { name: 'Adidas', date: '27/11', hour: '17:30', price: -599.0 },
+        { name: 'Burguer King', date: '27/11', hour: '17:10', price: -36.0 },
+        { name: 'Adidas', date: '27/11', hour: '18:30', price: -599.0 },
         { name: 'Salário', date: '27/11', hour: '20:00', price: 3500.0 },
         { name: 'Comida', date: '27/11', hour: '21:50', price: -25.0 },
       ],
@@ -31,7 +33,17 @@ export default class ContainerItem extends React.Component {
             <h2>{record.hour}</h2>
           </li>
           <li className="price">
-            <h2>{record.price}</h2>
+            <h2>
+              <NumberFormat
+                value={record.price}
+                decimalScale={2}
+                fixedDecimalScale
+                displayType="text"
+                decimalSeparator=","
+                thousandSeparator="."
+                prefix="R$"
+              />
+            </h2>
           </li>
         </ul>
       </Container>
