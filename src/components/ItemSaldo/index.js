@@ -2,106 +2,39 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function ContainerItem() {
-  return (
-    <>
+export default class ContainerItem extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      records: [
+        { name: 'Burguer King', date: '27/11', hour: '18:10', price: -36.0 },
+        { name: 'Adidas', date: '27/11', hour: '17:30', price: -599.0 },
+        { name: 'Salário', date: '27/11', hour: '20:00', price: 3500.0 },
+        { name: 'Comida', date: '27/11', hour: '21:50', price: -25.0 },
+      ],
+    };
+  }
+
+  render() {
+    const { records } = this.state;
+    return records.map(record => (
       <Container>
         <ul>
           <li className="name">
-            <h1>Burguer King</h1>
+            <h1>{record.name}</h1>
           </li>
           <li className="date">
-            <h2>27/11</h2>
+            <h2>{record.date}</h2>
           </li>
           <li className="hour">
-            <h2>18:10</h2>
+            <h2>{record.hour}</h2>
           </li>
           <li className="price">
-            <h2>-36.00</h2>
+            <h2>{record.price}</h2>
           </li>
         </ul>
       </Container>
-
-      <Container>
-        <ul>
-          <li className="name">
-            <h1>Lojas Renner</h1>
-          </li>
-          <li className="date">
-            <h2>27/11</h2>
-          </li>
-          <li>
-            <h2 className="hour">15:27</h2>
-          </li>
-          <li className="price">
-            <h2>-99.99</h2>
-          </li>
-        </ul>
-      </Container>
-      <Container>
-        <ul>
-          <li className="name">
-            <h1>Cantinho da Vovó</h1>
-          </li>
-          <li className="date">
-            <h2>27/11</h2>
-          </li>
-          <li>
-            <h2 className="hour">12:10</h2>
-          </li>
-          <li className="price">
-            <h2>-250.90</h2>
-          </li>
-        </ul>
-      </Container>
-      <Container>
-        <ul>
-          <li className="name">
-            <h1>Mercado Dia</h1>
-          </li>
-          <li className="date">
-            <h2>26/11</h2>
-          </li>
-          <li>
-            <h2 className="hour">20:48</h2>
-          </li>
-          <li className="price">
-            <h2>-120.90</h2>
-          </li>
-        </ul>
-      </Container>
-      <Container>
-        <ul>
-          <li className="name">
-            <h1>Lojas Americanas</h1>
-          </li>
-          <li className="date">
-            <h2>26/11</h2>
-          </li>
-          <li>
-            <h2 className="hour">10:20</h2>
-          </li>
-          <li className="price">
-            <h2>-440.00</h2>
-          </li>
-        </ul>
-      </Container>
-      <Container>
-        <ul>
-          <li className="name">
-            <h1>Cell Comp Assistência</h1>
-          </li>
-          <li className="date">
-            <h2>23/11</h2>
-          </li>
-          <li>
-            <h2 className="hour">14:21</h2>
-          </li>
-          <li className="price">
-            <h2>-190.80</h2>
-          </li>
-        </ul>
-      </Container>
-    </>
-  );
+    ));
+  }
 }
