@@ -9,54 +9,38 @@ import addAmigo from '../../assets/addAmigo.png';
 
 import { Container, Block, TitleBlock } from './styles';
 
-export default function ContainerBlock() {
-  return (
-    <>
-      <Container>
-        <Block>
-          <div>
-            <img
-              src={Emprestimo}
-              className="emprestimoImg"
-              alt="Icone empréstimo"
-            />
-            <TitleBlock>Empréstimo</TitleBlock>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <img src={Depositar} alt="Icone depósito" />
-            <TitleBlock>Depositar</TitleBlock>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <img src={Transferir} alt="Icone de transferência" />
-            <TitleBlock>Transferir</TitleBlock>
-          </div>
-        </Block>
-      </Container>
+export default class ContainerBlock extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      records: [
+        { name: 'Empréstimo', img: Emprestimo, alt: 'Icone empréstimo' },
+        { name: 'Depositar', img: Depositar, alt: 'Icone Depósito' },
+        { name: 'Transferir', img: Transferir, alt: 'Icone Tranferir' },
+        { name: 'Cartões', img: Cartoes, alt: 'Icone Cartões' },
+        { name: 'Investimento', img: Investimento, alt: 'Icone Investimento' },
+        {
+          name: 'Adicionar Amigo',
+          img: addAmigo,
+          alt: 'Icone Adicionar Amigo',
+        },
+      ],
+    };
+  }
 
+  render() {
+    const { records } = this.state;
+    return (
       <Container>
-        <Block>
-          <div>
-            <img src={Cartoes} alt="Icone de Cartão" />
-            <TitleBlock>Cartões</TitleBlock>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <img src={Investimento} alt="Icone de investimento" />
-            <TitleBlock>Investimentos</TitleBlock>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <img src={addAmigo} alt="Icone de indicar amigo" />
-            <TitleBlock>Indicar Amigo</TitleBlock>
-          </div>
-        </Block>
+        {records.map(record => (
+          <Block>
+            <div>
+              <img src={record.img} alt={record.alt} />
+              <TitleBlock>{record.name}</TitleBlock>
+            </div>
+          </Block>
+        ))}
       </Container>
-    </>
-  );
+    );
+  }
 }
