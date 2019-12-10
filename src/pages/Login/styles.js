@@ -1,5 +1,28 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Fundo from '../../assets/bagan.jpg';
+
+// Animations
+export const fade = keyframes`
+  from{
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
+export const move = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(1);
+  }
+`;
 
 export const Background = styled.div`
   background: linear-gradient(
@@ -32,6 +55,8 @@ export const Container = styled.div`
   padding: 1em;
   margin: 0.5em;
   text-align: center;
+  animation-name: ${fade};
+  animation-duration: 0.8s;
 `;
 
 export const Input = styled.input`
@@ -44,6 +69,10 @@ export const Input = styled.input`
   margin: 0.5rem;
   text-align: center;
   font-size: 1.2rem;
+  animation-name: ${move};
+  animation-duration: 500ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
 
   ::placeholder {
     color: #adadad;
@@ -60,6 +89,11 @@ export const Button = styled.button`
   height: 3rem;
   color: #7be11a;
   transition: 0.2s;
+  animation-name: ${move};
+  animation-duration: 500ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+
   :hover {
     background-color: #7be11a;
     color: #fff;
